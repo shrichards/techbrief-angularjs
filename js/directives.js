@@ -15,7 +15,7 @@ eatApp.directive('placeEntry', function(LunchPlacesService){
 				   		'<button class="btn btn-danger" data-ng-show="place.userAdded" data-ng-click="directiveRemove(place)">' +
 							'<i class="icon-minus icon-white"></i>' +
 						'</button>' +
-						'{{place.name}}' +
+						'{{place.name | yummy }}' +
 					'</span>'
 	};
 });

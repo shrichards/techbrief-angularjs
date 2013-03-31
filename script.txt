@@ -72,3 +72,8 @@ DEMO 9
 	git checkout tags/demo-9
 
 	Filter list based on text using built-in filter
+
+DEMO 10
+	git checkout tags/demo-10
+
+	Add filter that appends "mmmm Pizza"
