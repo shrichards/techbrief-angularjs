@@ -6,26 +6,29 @@
 	</head>
 
 	<body>
-		<h1>Where Can I Get Lunch In Sudbury?</h1>
-		
-		<div class="hero-unit span3">
-			<ul>
-				<li>Sudbury Farms</li>
-				<li>Lavender Asian Cuisine &amp Bar</li>
-				<li>Sudbury Pizza</li>
-				<li>Sudbury Coffee Works</li>
-				<li>Rossini's</li>
-				<li>Subway</li>
-			</ul>
-		</div>
+		<div data-ng-controller='LunchPlaceListCtrl'>
+			
+			<h1>Where Can I Get Lunch In Sudbury?</h1>
 
+			<div class="hero-unit span3">
+				<ul>
+					<li data-ng-repeat='place in lunchPlaces'>{{place.name}}</li>
+				</ul>
+			</div>
+			
+		</div>
 		<!-- 
 			Tons of javascript libraries!
 			http://cdnjs.com/ 
 		-->
+		
 		<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js" type="text/javascript"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.3/angular.min.js" type="text/javascript"></script>
-		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.js" type="text/javascript"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.1/angular-strap.min.js" type="text/javascript"></script>
+
+		<script src="js/app.js" type="text/javascript"></script>
+		<script src="js/controllers.js" type="text/javascript"></script>
 	</body>
 </html>
