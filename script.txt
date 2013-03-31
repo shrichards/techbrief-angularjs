@@ -42,3 +42,12 @@ DEMO 5
 	git checkout tags/demo-5
 
 	execute the removePlace function via "&" link
+
+DEMO 6
+	git checkout tags/demo-6
+
+	refactor into PlacesService, inject into controller
+
+	point out that now we don't really need our controller to have an add method; we could do it directly in service.
+
+	SERVICES ARE SINGLETONS

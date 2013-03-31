@@ -1,32 +1,26 @@
-eatApp.controller("LunchPlaceListCtrl", function($scope){
+eatApp.controller("LunchPlaceListCtrl", function($scope, LunchPlacesService){
 	
-	$scope.lunchPlaces = [
-		{ name : 'Sudbury Farms'},
-		{ name : 'Lavender Asian Cuisine & Bar'},
-		{ name : 'Sudbury Pizza'},
-		{ name : 'Sudbury Coffee Works'},
-		{ name : 'Rossini\'s'},
-		{ name : 'Subway'}
-	];
+	$scope.getLunchPlaces = function(){
+		return LunchPlacesService.lunchPlaces;
+	}
 
 	$scope.addNewPlace = function(){
 		if(!!$scope.newPlaceName && $scope.newPlaceName != ""){
-			$scope.lunchPlaces[$scope.lunchPlaces.length] = { name: $scope.newPlaceName, userAdded: true };
-			$scope.newPlaceName = '';
+			var place = { name : $scope.newPlaceName };
+			LunchPlacesService.addPlace(place);
+			$scope.newPlaceName = "";
 		}
 	}
 
 	$scope.removePlace = function(place){
-		$scope.lunchPlaces = _.reject($scope.lunchPlaces, function(p){ return p === place; });
+		LunchPlacesService.removePlace(place);
 	}
 
 	$scope.hasUserAddedPlace = function(){
-		return _.some($scope.lunchPlaces, function(p){ return p.userAdded; });
+		return !!LunchPlacesService.getLastUserAddedPlace();
 	}
 
 	$scope.getLastUserAddedPlace = function(){
-		return _.last(
-			_.filter($scope.lunchPlaces, function(p){ return p.userAdded; })
-		);
+		return LunchPlacesService.getLastUserAddedPlace();
 	}
 });

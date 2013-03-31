@@ -12,7 +12,7 @@
 
 			<div class="well span3">
 				<ul>
-					<li data-ng-repeat='place in lunchPlaces'>
+					<li data-ng-repeat='place in getLunchPlaces()'>
 						<place-entry place="place" remove="removePlace(place)"></place-entry>
 					</li>
 				</ul>
@@ -42,5 +42,6 @@
 		<script src="js/app.js" type="text/javascript"></script>
 		<script src="js/controllers.js" type="text/javascript"></script>
 		<script src="js/directives.js" type="text/javascript"></script>
+		<script src="js/services.js" type="text/javascript"></script>
 	</body>
 </html>
