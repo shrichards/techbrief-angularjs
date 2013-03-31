@@ -10,12 +10,21 @@
 			
 			<h1>Where Can I Get Lunch In Sudbury?</h1>
 
-			<div class="hero-unit span3">
+			<div class="well span3">
 				<ul>
-					<li data-ng-repeat='place in lunchPlaces'>{{place.name}}</li>
+					<li data-ng-repeat='place in lunchPlaces'>
+						<button class="btn btn-danger" data-ng-show={{place.userAdded}} data-ng-click="removePlace(place)"> 
+							<i class="icon-minus icon-white"></i>
+						</button>
+						{{place.name}}
+					</li>
 				</ul>
 			</div>
-			
+
+			<div class="well well-small span4">
+				<input type="text" data-ng-model="newPlaceName" />
+				<button class="btn btn-primary" data-ng-click="addNewPlace()"><i class="icon-plus icon-white"></i> Add </button>
+			</div>
 		</div>
 		<!-- 
 			Tons of javascript libraries!

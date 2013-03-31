@@ -8,5 +8,16 @@ eatApp.controller("LunchPlaceListCtrl", function($scope){
 		{ name : 'Rossini\'s'},
 		{ name : 'Subway'}
 	];
-	
+
+	$scope.addNewPlace = function(){
+		if(!!$scope.newPlaceName && $scope.newPlaceName != ""){
+			$scope.lunchPlaces[$scope.lunchPlaces.length] = { name: $scope.newPlaceName, userAdded: true };
+			$scope.newPlaceName = '';
+		}
+	}
+
+	$scope.removePlace = function(place){
+		$scope.lunchPlaces = _.reject($scope.lunchPlaces, function(p){ return p === place; });
+	}
+
 });
