@@ -12,10 +12,6 @@ eatApp.controller("LunchPlaceListCtrl", function($scope, LunchPlacesService){
 		}
 	}
 
-	$scope.removePlace = function(place){
-		LunchPlacesService.removePlace(place);
-	}
-
 	$scope.hasUserAddedPlace = function(){
 		return !!LunchPlacesService.getLastUserAddedPlace();
 	}

@@ -51,3 +51,12 @@ DEMO 6
 	point out that now we don't really need our controller to have an add method; we could do it directly in service.
 
 	SERVICES ARE SINGLETONS
+
+DEMO 7
+	git checkout tags/demo-7
+
+	LunchPlacesService injected into place-entry directive
+
+	Don't need the remove via '&' link on directive
+
+	Don't need the remove method in the controller
