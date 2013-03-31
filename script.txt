@@ -27,3 +27,13 @@ DEMO 3
 	highlighting most recently added place
 
 	Illustrates that can data-bind to an object returned by a function
+
+DEMO 4
+	git checkout tags/demo-4
+
+	Extract rendering of element in UL to <place-entry></place-entry>
+
+	'=' sets up two-way data binding between "outside world" and the directive
+	('@' sets up one-way data binding, '&' executes method on containing scope)
+	
+	Breaks delete button - time to talk about isolate scope
