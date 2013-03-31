@@ -1,3 +1,9 @@
+var eatApp = angular.module('eatApp', []);
+
+
+
+
+
 
 var apiKeys = apiKeys || {
 	foursquare : {
@@ -5,3 +11,4 @@ var apiKeys = apiKeys || {
 		clientSecret: 'my-client-secret'
 	}
 };
+
