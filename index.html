@@ -11,8 +11,11 @@
 			<h1>Where Can I Get Lunch In Sudbury?</h1>
 
 			<div class="well span3">
+				<div>
+					Filter: <input type="text" data-ng-model="listFilterText"></input>
+				</div>
 				<ul>
-					<li data-ng-repeat='place in getLunchPlaces()'>
+					<li data-ng-repeat='place in getLunchPlaces() | filter:listFilterText'>
 						<place-entry place="place"></place-entry>
 					</li>
 				</ul>
@@ -23,9 +26,7 @@
 				<button class="btn btn-primary" data-ng-click="addNewPlace()"><i class="icon-plus icon-white"></i> Add </button>
 			</div>
 
-			<div class="span4" last-added-place >
-
-			<div>
+			<div class="span4" last-added-place ></div>
 
 		</div>
 		<!-- 

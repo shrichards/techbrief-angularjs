@@ -67,3 +67,8 @@ DEMO 8
 	created last-added-place attribute directive with LunchPlacesService injected
 
 	Don't need the has last junk in the controller
+
+DEMO 9
+	git checkout tags/demo-9
+
+	Filter list based on text using built-in filter
