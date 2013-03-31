@@ -1,0 +1,15 @@
+DEMO 0
+	git checkout tags/demo-0
+
+	static list of some lunch spots in Sudbury
+
+DEMO 1
+	git checkout tags/demo-1
+
+	declared our eatApp module; set it as our application module using the data-ng-app directive
+	
+	created a controller that has the list of restaraunts in it
+
+	used data-ng-controller to bind the controller to the div that contains the UI elements it is responsible for
+
+	use the data-ng-repeat directive to enumerate the restaraunt names
