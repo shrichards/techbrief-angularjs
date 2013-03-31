@@ -20,4 +20,13 @@ eatApp.controller("LunchPlaceListCtrl", function($scope){
 		$scope.lunchPlaces = _.reject($scope.lunchPlaces, function(p){ return p === place; });
 	}
 
+	$scope.hasUserAddedPlace = function(){
+		return _.some($scope.lunchPlaces, function(p){ return p.userAdded; });
+	}
+
+	$scope.getLastUserAddedPlace = function(){
+		return _.last(
+			_.filter($scope.lunchPlaces, function(p){ return p.userAdded; })
+		);
+	}
 });

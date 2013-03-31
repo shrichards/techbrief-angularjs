@@ -21,3 +21,9 @@ DEMO 2
 
 	Change to array of places in controller automatically changes those that are displayed
 
+DEMO 3
+	git checkout tags/demo-3
+
+	highlighting most recently added place
+
+	Illustrates that can data-bind to an object returned by a function

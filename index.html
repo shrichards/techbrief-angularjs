@@ -27,6 +27,11 @@
 				<input type="text" data-ng-model="newPlaceName" />
 				<button class="btn btn-primary" data-ng-click="addNewPlace()"><i class="icon-plus icon-white"></i> Add </button>
 			</div>
+
+			<div class="well span4" data-ng-show="hasUserAddedPlace()">
+				Last Added Place: {{getLastUserAddedPlace().name}}
+			<div>
+
 		</div>
 		<!-- 
 			Tons of javascript libraries!
