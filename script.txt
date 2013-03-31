@@ -60,3 +60,10 @@ DEMO 7
 	Don't need the remove via '&' link on directive
 
 	Don't need the remove method in the controller
+
+DEMO 8
+	git gheckout tags/demo-8
+
+	created last-added-place attribute directive with LunchPlacesService injected
+
+	Don't need the has last junk in the controller

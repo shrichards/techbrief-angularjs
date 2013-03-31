@@ -11,12 +11,4 @@ eatApp.controller("LunchPlaceListCtrl", function($scope, LunchPlacesService){
 			$scope.newPlaceName = "";
 		}
 	}
-
-	$scope.hasUserAddedPlace = function(){
-		return !!LunchPlacesService.getLastUserAddedPlace();
-	}
-
-	$scope.getLastUserAddedPlace = function(){
-		return LunchPlacesService.getLastUserAddedPlace();
-	}
 });
