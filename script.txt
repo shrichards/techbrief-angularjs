@@ -35,5 +35,10 @@ DEMO 4
 
 	'=' sets up two-way data binding between "outside world" and the directive
 	('@' sets up one-way data binding, '&' executes method on containing scope)
-	
+
 	Breaks delete button - time to talk about isolate scope
+
+DEMO 5
+	git checkout tags/demo-5
+
+	execute the removePlace function via "&" link
