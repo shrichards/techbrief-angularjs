@@ -7,9 +7,17 @@ DEMO 1
 	git checkout tags/demo-1
 
 	declared our eatApp module; set it as our application module using the data-ng-app directive
-	
+
 	created a controller that has the list of restaraunts in it
 
 	used data-ng-controller to bind the controller to the div that contains the UI elements it is responsible for
 
 	use the data-ng-repeat directive to enumerate the restaraunt names
+
+DEMO 2
+	git checkout tags/demo-2
+
+	Added add/remove functionality
+
+	Change to array of places in controller automatically changes those that are displayed
+
