@@ -1,6 +1,7 @@
-eatApp.service('LunchPlacesService', function($resource){
+eatApp.service('LunchPlacesService', ['$resource', function($resource){
+	// http://www.alexrothenberg.com/2013/02/11/the-magic-behind-angularjs-dependency-injection.html
 
-	
+	// Refactor this into its own service?
 	this.foursquarePlacesResource = $resource(
 			'https://api.foursquare.com/v2/venues/explore?near=:near&section=:section&client_id=:clientId&client_secret=:clientSecret&v=:versionDate',
 			{
@@ -22,6 +23,8 @@ eatApp.service('LunchPlacesService', function($resource){
 		// why don't we assign this to a new empty array?
 		this.lunchPlaces.length = 0;
 		var myService = this;
+
+		// This is ASYNC!
 		var rawFoursquarePlaces  = this.foursquarePlacesResource.getLunchPlaces({near:location}, function(){
 			var places = _.map(rawFoursquarePlaces.response.groups[0].items, function(item){ return {name: item.venue.name}});	
 			_.each(places, function(p){ myService._addPlace(p)});
@@ -60,4 +63,4 @@ eatApp.service('LunchPlacesService', function($resource){
 		);
 	};
 
-});
+}]);

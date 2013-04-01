@@ -20,7 +20,7 @@ eatApp.directive('placeEntry', function(LunchPlacesService){
 	};
 });
 
-eatApp.directive('lastAddedPlace', function($log,LunchPlacesService){
+eatApp.directive('lastAddedPlace', function($log, LunchPlacesService){
 	return{
 		restrict: 'A',
 		replace:false,

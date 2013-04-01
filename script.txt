@@ -84,3 +84,8 @@ DEMO 11
 	refactor to use the foursquare service
 
 	$resource injection
+
+DEMO 12
+	git checkout tags/demo-12
+
+	refactor service to be minification-compatible
