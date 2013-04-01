@@ -1,4 +1,4 @@
-var eatApp = angular.module('eatApp', []);
+var eatApp = angular.module('eatApp', ['ngResource']);
 
 
 

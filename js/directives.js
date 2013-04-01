@@ -28,12 +28,10 @@ eatApp.directive('lastAddedPlace', function($log,LunchPlacesService){
 		controller : function($scope, $element){
 			
 			$scope.hasUserAddedPlace = function(){
-				$log.log('checking for user added place');
 				return !!LunchPlacesService.getLastUserAddedPlace();
 			}
 
 			$scope.getLastUserAddedPlace = function(){
-				$log.log('getting last user added place');
 				return LunchPlacesService.getLastUserAddedPlace();
 			}
 

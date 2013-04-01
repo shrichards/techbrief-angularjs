@@ -77,3 +77,10 @@ DEMO 10
 	git checkout tags/demo-10
 
 	Add filter that appends "mmmm Pizza"
+
+DEMO 11
+	git checkout tags/demo-11
+
+	refactor to use the foursquare service
+
+	$resource injection
