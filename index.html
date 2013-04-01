@@ -8,14 +8,14 @@
 	<body>
 		<div data-ng-controller='LunchPlaceListCtrl'>
 			
-			<h1>Where Can I Get Lunch In Sudbury?</h1>
+			<h1>Where Can I Get Lunch Near <input type="text" data-ng-model="nearLocation" value="{{nearLocation}}" />?</h1>
 
 			<div class="well span3">
 				<div>
 					Filter: <input type="text" data-ng-model="listFilterText"></input>
 				</div>
 				<ul>
-					<li data-ng-repeat='place in getLunchPlaces() | filter:listFilterText'>
+					<li data-ng-repeat='place in lunchPlaces | filter:listFilterText'>
 						<place-entry place="place"></place-entry>
 					</li>
 				</ul>
@@ -28,6 +28,7 @@
 
 			<div class="span4" last-added-place ></div>
 
+			<button class='btn' data-ng-click="getFoursquarePlaces()">Get Foursquare Places</button>
 		</div>
 		<!-- 
 			Tons of javascript libraries!
@@ -37,9 +38,11 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js" type="text/javascript"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.3/angular.min.js" type="text/javascript"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.1/angular-resource.min.js" type="text/javascript"></script>
 		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.js" type="text/javascript"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.1/angular-strap.min.js" type="text/javascript"></script>
 
+		<script src="js/keys.js" type="text/javascript"></script>
 		<script src="js/app.js" type="text/javascript"></script>
 		<script src="js/controllers.js" type="text/javascript"></script>
 		<script src="js/directives.js" type="text/javascript"></script>
